@@ -1,0 +1,94 @@
+@tailwind base;
+
+html { font-family: 'Inter', sans-serif; font-weight: 400; }
+h1, h2, h3 { font-family: 'Inter', sans-serif; @apply leading-none whitespace-no-wrap; }
+
+h1 {
+    @apply text-xl;
+    font-weight: 700;
+}
+
+h2 {
+    @apply text-lg;
+    font-weight: 700;
+}
+
+h3 {
+    @apply text-big;
+    font-weight: 700;
+}
+
+.title {
+    @apply text-primary;
+}
+
+.subtitle {
+    @apply text-gray-600 uppercase tracking-wide font-normal text-base mt-2;
+}
+
+::selection {
+    @apply bg-primary text-white;
+}
+
+a {
+    @apply text-primary underline;
+}
+
+#content {
+    @apply mt-4 border border-gray-400 shadow-xl rounded p-8;
+}
+
+a:hover, a:active {
+    @apply opacity-75;
+}
+
+.status-row {
+    @apply flex items-center justify-end flex-wrap p-4;
+}
+
+.status-row:nth-child(even) {
+    @apply bg-gray-200 rounded;
+}
+
+.status-row:not(:last-child) {
+    @apply mb-4;
+}
+
+.status-row span.status {
+    @apply text-sm flex flex-row items-center;
+}
+
+.status-row span.status> div.icon {
+    @apply ml-2 h-4 w-4 rounded-full;
+}
+
+.status-row span.status.checking {
+    @apply text-gray-600;
+}
+
+.status-row span.status.checking > div.icon {
+    @apply bg-gray-400;
+}
+
+.status-row span.status.error {
+    @apply text-orange-600;
+}
+
+.status-row span.status.error > div.icon {
+    @apply bg-orange-500;
+}
+
+.status-row span.status.good {
+    @apply text-gray-800;
+}
+
+.status-row span.status.good > div.icon {
+    @apply  bg-green-500;
+}
+
+footer {
+    @apply text-sm mt-16 text-gray-600;
+}
+
+@tailwind components;
+@tailwind utilities;
